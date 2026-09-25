@@ -11,7 +11,6 @@ namespace Ecom.Core.Entities
         public string Description { get; set; } = string.Empty;
 
         public int ProductId { get; set; }
-        [ForeignKey(nameof(ProductId))]  
         public ICollection<Product> Products { get; set;  } = new List<Product>();
         
 

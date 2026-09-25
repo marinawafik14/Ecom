@@ -20,7 +20,7 @@ namespace Ecom.Infrastructure
             //service.AddScoped<ICategoryRepository, CategoryRepository>();
             //service.AddScoped<IProductRepository, ProductRepository>();
             //service.AddScoped<IPhotoRepository, PhotoRepository>();
-            service.AddScoped<IUnitOfWork, IUnitOfWork>();
+            service.AddScoped<IUnitOfWork, UnitOfWork>();
             service.AddDbContext<AppDbContext>( op =>
             {
                 op.UseSqlServer(configuration.GetConnectionString("EcomDatabase"));

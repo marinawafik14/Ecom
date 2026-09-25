@@ -15,8 +15,7 @@ namespace Ecom.Infrastructure.Data.Config
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.Description).IsRequired();
             builder.Property(x => x.Price).HasPrecision(18,2);
-
-
+            builder.HasData(new Product { Id = 1, Name = "testCategory", Description = "testtt" , Price= 12, CategoryId=1 });
 
         }
     }
